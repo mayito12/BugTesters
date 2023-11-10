@@ -1,11 +1,8 @@
 import { useApi, useAccount } from '@gear-js/react-hooks';
-import { Routing } from 'pages';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
-import { Header, ApiLoader } from 'components';
+import { Routes, Route } from 'react-router-dom';
 import { withProviders } from 'hocs';
-import { Landing } from 'pages/landing/Landing';
 import { Home } from 'pages/home';
-
+import { Landing } from 'pages/landing/Landing';
 
 import 'App.css';
 
@@ -16,15 +13,11 @@ function Component() {
   // const isAppReady = isApiReady && isAccountReady;
 
   return (
-    <>
-        {/* <Header isAccountVisible={isAccountReady} />
-        <main>{isAppReady ? <Routing /> : <ApiLoader />}</main> */}
-      {/* <Landing />  */}
-      <Home />
-   
-    </>
+    <Routes>
+      <Route path="/Home" element={<Home />} />
+      <Route path="/" element={<Landing />} />
+    </Routes>
   );
 }
-
 
 export const App = withProviders(Component);

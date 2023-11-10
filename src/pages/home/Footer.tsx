@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Button, Image, Divider } from '@chakra-ui/react';
+import { Box, Flex, Text, Button, Image, Divider, Link } from '@chakra-ui/react';
 
 function Footer() {
     return ( 
@@ -8,6 +8,7 @@ function Footer() {
         paddingY="2rem"
         textAlign="center"
         padding="3% 10%"
+        marginTop="10%"
     >
         <Flex justifyContent="space-between" alignItems="center">
             <Text fontSize="1rem" marginLeft="2rem">©2023 Healthful Hearts</Text>

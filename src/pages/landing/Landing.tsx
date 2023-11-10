@@ -1,10 +1,9 @@
-import { Box, Flex, Text, Button, Image, Divider , Link} from '@chakra-ui/react';
+import { Box, Flex, Text, Button, Image, Divider} from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 import { FaDog } from 'react-icons/fa';
-import { Link as RouterLink } from 'react-router-dom';
 
-import { Ediciones } from './Ediciones';
-import { Comprende } from './Comprende';
-import { Comunidad } from './Comunidad';
+
+
 
 function Landing() {
     return (
@@ -19,45 +18,49 @@ function Landing() {
          
             {/* Navbar superior */}
             <Flex
-      width="100%"
-      bg="transparent"
-      color="white"
-      justifyContent="space-between" // Cambiado a "space-between" para distribuir los elementos en el contenedor
-      paddingY="1rem"
-      alignItems="center"
-      paddingX="2rem" // Añadido un espacio horizontal en los bordes
-    >
-      {/* Sección Izquierda */}
-
-      <Flex alignItems="center"> {/* Alineado verticalmente al centro */}
-      <Box width="35%" marginRight="4rem" marginLeft="2.5rem">
-                    <Image src="assets/images/landing/logo.png" alt="Girl Image" />
-                </Box>
-        <Text fontSize="1rem" marginRight="1.5rem" color="#2E2133">
-          Home
-        </Text>
-        <Text fontSize="1rem" marginRight="1.5rem" color="#2E2133">
-          Sobre Nosotros
-        </Text>
-        <Text fontSize="1rem" color="black">
-          Contacto
-        </Text>
-      </Flex>
-
-     
-
-      {/* Botón Derecha */}
-      <Button
-        bg="#2E2133"
-        color="#2E2133"
-        borderRadius="8px" // Bordes redondeados
-        width="120px"
-        padding="0.5rem"
-        fontSize="1rem"
+        width="100%"
+        bg="transparent"
+        color="white"
+        justifyContent="space-between"
+        paddingY="1rem"
+        alignItems="center"
+        paddingX="2rem"
       >
-        <Text color="white">Iniciar sesión</Text>
-      </Button>
-    </Flex>
+        {/* Sección Izquierda */}
+        <Flex alignItems="center">
+          <Box width="35%" marginRight="4rem" marginLeft="2.5rem">
+            <Image src="assets/images/landing/logo.png" alt="Logo" />
+          </Box>
+          <Link to="/Home">
+            <Text fontSize="1rem" marginRight="1.5rem" color="#2E2133">
+              Home
+            </Text>
+          </Link>
+          <Link to="/sobre-nosotros">
+            <Text fontSize="1rem" marginRight="1.5rem" color="#2E2133">
+              Nosotros
+            </Text>
+          </Link>
+          <Link to="/contacto">
+            <Text fontSize="1rem" marginRight="1.5rem" color="#2E2133" >
+              Contacto
+            </Text>
+          </Link>
+          
+        </Flex>
+
+        {/* Botón Derecha */}
+        <Button
+          bg="#2E2133"
+          color="#2E2133"
+          borderRadius="8px"
+          width="120px"
+          padding="0.5rem"
+          fontSize="1rem"
+        >
+          <Text color="white">Registrarse</Text>
+        </Button>
+      </Flex>
 
             <Flex width="100%" height="100vh">
                 <Flex
@@ -81,7 +84,8 @@ function Landing() {
                             ¡Bienvenido a Heathful Hearts!
                         </Text>
                         <Text fontSize="1rem" color="#5C4266" marginBottom="2rem" textAlign="justify">
-                            En Heathful Hearts estamos dedicados a apoyar tu salud mental de una manera única y atractiva. Descubre cómo nuestros NFTs y minijuegos pueden ayudarte a sentirte mejor y más saludable todos los días.
+                            En Heathful Hearts estamos dedicados a apoyar tu salud mental de una manera única y atractiva. Descubre cómo nuestros NFTs 
+                            y minijuegos pueden ayudarte a sentirte mejor y más saludable todos los días.
                         </Text>
                         <Flex justifyContent="center">
                             <Button
@@ -110,7 +114,7 @@ function Landing() {
                     </Flex>
                 </Flex>
 
-                <Box width="50%" marginLeft="18rem" marginTop="8rem">
+                <Box width="50%" marginLeft="18rem" marginTop="5rem">
                     <Image src="assets/images/landing/girl2.jpeg" alt="Girl Image" />
                 </Box>
             </Flex>
@@ -139,7 +143,12 @@ function Landing() {
                             Colecciona adorables mascotas NFT que te acompañarán en tu viaje hacia el bienestar. Desbloquea nuevas mascotas a través de niveles y personaliza tu experiencia.
                         </Text>
                         {/* Icono de perro debajo del texto */}
-                        <FaDog size={40} color="#2E2133" />
+                        <Image
+                        src="assets/images/landing/NewIcons.png"
+                        alt="Descripción de la imagen"
+                       
+                       
+                    />
                     </Flex>
                 </Flex>
 
@@ -253,10 +262,10 @@ function Landing() {
                 >
                     {/* Ajusta el tamaño y centra la imagen */}
                     <Image
-                        src="assets/images/landing/ediciones.png"
+                        src="assets/images/landing/image4.png"
                         alt="Descripción de la imagen"
                         margin="auto"
-                        boxSize={{ base: "50%", md: "50%" }} // Ajusta el tamaño de la imagen
+                        boxSize={{ base: "40%", md: "50%" }} // Ajusta el tamaño de la imagen
                     />
                 </Box>
 
@@ -308,6 +317,7 @@ function Landing() {
                 backgroundColor="#EADAF0"
                 color="#939EA4"
                 paddingY="2rem"
+                marginTop="15%"
                 textAlign="center"
                 padding="3% 10%"
             >

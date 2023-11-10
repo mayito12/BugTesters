@@ -21,7 +21,7 @@ function Welcome() {
                     color="#2E2133"
                 >
                     <Text fontSize="2rem" fontWeight="bold" marginBottom="1rem">
-                        ¡Bienvenido a Heathful Hearts!
+                    ¡Bienvenido Mario!
                     </Text>
                     <Text fontSize="1rem" color="#5C4266" marginBottom="2rem" textAlign="justify">
                         En Heathful Hearts estamos dedicados a apoyar tu salud mental de una manera única y atractiva. Descubre cómo nuestros NFTs y minijuegos pueden ayudarte a sentirte mejor y más saludable todos los días.
@@ -53,8 +53,8 @@ function Welcome() {
                 </Flex>
             </Flex>
 
-            <Box width="50%" marginLeft="18rem" marginTop="8rem">
-                <Image src="assets/images/landing/girl2.jpeg" alt="Girl Image" />
+            <Box width="100%"  paddingLeft="32rem" marginTop="4rem">
+                <Image src="assets/images/home/mariofinal.png" alt="Boy Image" />
             </Box>
         </Flex>
     );
